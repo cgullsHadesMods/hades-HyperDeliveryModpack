@@ -1,3 +1,24 @@
 [submodule "ModUtil"]
 	path = ModUtil
 	url = https://github.com/SGG-Modding/sgg-mod-modutil
+[submodule "SatyrSackControl"]
+	path = SatyrSackControl
+	url = https://github.com/Museus/SatyrSackControl
+[submodule "RemoveThanatos"]
+	path = RemoveThanatos
+	url = https://github.com/Museus/RemoveThanatos
+[submodule "RemoveCutscenes"]
+	path = RemoveCutscenes
+	url = https://github.com/Museus/RemoveCutscenes
+[submodule "MinibossControl"]
+	path = MinibossControl
+	url = https://github.com/Museus/MinibossControl
+[submodule "InfiniDD"]
+	path = InfiniDD
+	url = https://github.com/Museus/InfiniDD
+[submodule "MoreMidshops"]
+	path = MoreMidshops
+	url = https://github.com/cgu11/hades-MoreMidshops
+[submodule "Chamber1EpicOnly"]
+	path = Chamber1EpicOnly
+	url = https://github.com/cgu11/hades-Chamber1EpicOnly.git
