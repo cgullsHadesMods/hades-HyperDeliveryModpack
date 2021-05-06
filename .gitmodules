@@ -22,3 +22,6 @@
 [submodule "Chamber1EpicOnly"]
 	path = Chamber1EpicOnly
 	url = https://github.com/cgu11/hades-Chamber1EpicOnly.git
+[submodule "EllosStartingBoonSelectorMod"]
+	path = EllosStartingBoonSelectorMod
+	url = https://github.com/cgu11/EllosStartingBoonSelectorMod
