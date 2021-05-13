@@ -19,6 +19,7 @@
   - DontGetVorimed (Contributor)
   - LootChoiceExt (Contributor)
   - EllosStartingBoonSelectorMod (Contributor)
+  - InfiniDD (Contributor)
 
 - [Ellomenop](https://github.com/ellomenop)
   - EllosStartingBoonSelectorMod (Author)
