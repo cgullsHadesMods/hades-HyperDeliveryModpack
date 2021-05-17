@@ -25,3 +25,6 @@
 [submodule "EllosStartingBoonSelectorMod"]
 	path = EllosStartingBoonSelectorMod
 	url = https://github.com/cgu11/EllosStartingBoonSelectorMod
+[submodule "DontGetVorimed"]
+	path = DontGetVorimed
+	url = https://github.com/cgu11/DontGetVorimed

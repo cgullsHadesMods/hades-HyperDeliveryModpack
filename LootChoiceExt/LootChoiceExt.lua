@@ -28,7 +28,7 @@ ModUtil.BaseOverride("CalcNumLootChoices", function()
 	return numChoices
 end, LootChoiceExt)
 
-ModUtil.BaseOverride("CreateBoonLootButtons", function( lootData )
+ModUtil.BaseOverride("CreateBoonLootButtons", function( lootData, reroll )
 
 	-- BASE CODE ... (From Live Steam version v1.37996, pulled on 2021.04.27)
 	local components = ScreenAnchors.ChoiceScreen.Components
