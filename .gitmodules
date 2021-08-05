@@ -28,3 +28,6 @@
 [submodule "DontGetVorimed"]
 	path = DontGetVorimed
 	url = https://github.com/cgu11/DontGetVorimed
+[submodule "RunStartControl"]
+	path = RunStartControl
+	url = https://github.com/Museus/RunStartControl.git
