@@ -31,3 +31,6 @@
 [submodule "RunStartControl"]
 	path = RunStartControl
 	url = https://github.com/Museus/RunStartControl.git
+[submodule "hades-EncounterBalancer"]
+	path = hades-EncounterBalancer
+	url = https://github.com/cgu11/hades-EncounterBalancer

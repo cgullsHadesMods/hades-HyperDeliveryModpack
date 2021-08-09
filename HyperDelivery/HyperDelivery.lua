@@ -6,7 +6,7 @@ ModUtil.WrapBaseFunction("StartRoom", function ( baseFunc, ... )
 
     PrintUtil.createOverlayLine(
         "HD5 Text",
-        "HD5 QUALIFIERS",
+        "HYPER DELIVERY 5",
         MergeTables(
             text_config_table,
             {
@@ -25,7 +25,7 @@ ModUtil.WrapBaseFunction("ShowCombatUI", function ( baseFunc, ... )
 
     PrintUtil.createOverlayLine(
         "HD5 Text",
-        "HD5 QUALIFIERS",
+        "HYPER DELIVERY 5",
         MergeTables(
             text_config_table,
             {
@@ -38,8 +38,13 @@ ModUtil.WrapBaseFunction("ShowCombatUI", function ( baseFunc, ... )
     baseFunc(...)
 end, HyperDelivery)
 
+ModUtil.WrapBaseFunction("ChooseStartingRoom", function( baseFunc, ... )
+    HyperDelivery.BannerDisplayed = false
+    return baseFunc( ... )
+end, HyperDelivery)
+
 ModUtil.WrapBaseFunction("DisplayLocationText", function( baseFunc, eventSource, args)
-    if args.Text == "Location_Tartarus" then
+    if args.Text == "Location_Tartarus" and not HyperDelivery.BannerDisplayed then
         local funnytext = RandomChance(0.15)
         args.Text = "dragonsquad esports presents"
         if funnytext then
@@ -54,6 +59,7 @@ ModUtil.WrapBaseFunction("DisplayLocationText", function( baseFunc, eventSource,
         args.Delay = 0.6
         args.FontScale = 1.0
         baseFunc(eventSource, args)
+        HyperDelivery.BannerDisplayed = true
     else
         baseFunc(eventSource,args)
     end
