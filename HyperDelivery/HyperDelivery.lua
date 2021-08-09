@@ -1,5 +1,7 @@
 ModUtil.RegisterMod("HyperDelivery")
 
+HyperDelivery.BannerDisplayed = false
+
 -- Scripts/RoomManager.lua : 1874
 ModUtil.WrapBaseFunction("StartRoom", function ( baseFunc, ... )
     local text_config_table = DeepCopyTable(UIData.CurrentRunDepth.TextFormat)
@@ -38,13 +40,13 @@ ModUtil.WrapBaseFunction("ShowCombatUI", function ( baseFunc, ... )
     baseFunc(...)
 end, HyperDelivery)
 
-ModUtil.WrapBaseFunction("ChooseStartingRoom", function( baseFunc, ... )
+ModUtil.WrapBaseFunction("StartNewRun", function( baseFunc, ... )
     HyperDelivery.BannerDisplayed = false
     return baseFunc( ... )
 end, HyperDelivery)
 
 ModUtil.WrapBaseFunction("DisplayLocationText", function( baseFunc, eventSource, args)
-    if args.Text == "Location_Tartarus" and not HyperDelivery.BannerDisplayed then
+    if (args.Text == "Location_Tartarus") and (not HyperDelivery.BannerDisplayed) then
         local funnytext = RandomChance(0.15)
         args.Text = "dragonsquad esports presents"
         if funnytext then
@@ -60,6 +62,7 @@ ModUtil.WrapBaseFunction("DisplayLocationText", function( baseFunc, eventSource,
         args.FontScale = 1.0
         baseFunc(eventSource, args)
         HyperDelivery.BannerDisplayed = true
+        args.Text = "Location_Tartarus"
     else
         baseFunc(eventSource,args)
     end
